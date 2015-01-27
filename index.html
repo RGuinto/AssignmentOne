@@ -1,0 +1,124 @@
+<!doctype html>
+<html ng-app="HelloQuiz">
+	<head>
+		<meta name="viewport" conten"width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+
+		<title>
+			QuiZZap!
+		</title>
+		
+		<!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">-->
+		<!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">-->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+		<!--<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="pure-release-0.5.0/pure-min.css">
+		<link rel="stylesheet" href="pure-release-0.5.0/grids-responsive-min.css">
+		<link rel="stylesheet" href="pure-release-0.5.0/base-min.css">
+		<link rel="stylesheet" href="css/index.css">
+		
+	</head>
+
+	<body class="container">
+		<div class="header">
+			<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+				<a class="pure-menu-heading" href="">
+					<(.   .<)
+				</a>
+				<ul>
+					<li class="pure-menu-selected">
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Quiz Details</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="splash-container">
+			<div class="splash">
+				<h1 class="splash-head">
+					<div>
+		   				 <iquiz summary="Language Recognition Quiz"></iquiz>
+					</div>
+				</h1>
+				<p class="splash-subhead">
+					Press the button to Start
+				</p>
+				<p>
+					<a class="pure-button pure-button-primary" href="#1">
+						START!
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="content-wrapper">
+			<div id="1" class="ribbon l-box-lrg pure-g">
+				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+					<img class="pure-image-responsive" width="300" src="img/One.jpg" alt="Quiz1Img">
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon">
+						<iquestion text="Central Semitic language, most closely related to Hebrew, Ugaritic and Phoenician. What language is this writing?::Hebrew;Chinese;__Arabic;Basque"></iquestion>
+					</h2>
+				</div>
+			</div>
+
+			<div id="2" class="ribbon2 l-box-lrg pure-g">
+				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+					<img class="pure-image-responsive" width="300" src="img/Two.jpg" alt="Quiz2Img">
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon2">
+						<iquestion text="During the 19th century a number of versions of this alphabet containing between 28 and 44 letters were used. What is this written language?::Marathi;Mongolian;__Bulgarian;Greek"></iquestion>
+					</h2>
+				</div>
+			</div>
+
+			<div id="3" class="ribbon2 l-box-lrg pure-g">
+				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+					<img class="pure-image-responsive" width="300" src="img/Three.jpg" alt="Quiz3Img">
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon3">
+						<iquestion text="What language is this writing?::__Chinese;Japanese;Vietnamese;Mongolian"></iquestion>
+					</h2>
+				</div>
+			</div>
+
+			<div id="result" class="ribbon l-box-lrg pure-g">
+				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+					<img class="pure-image-responsive" width="300" src="img/complete.png" alt="completeImg">
+				</div>
+				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+					<h2 class="content-head content-head-ribbon3">
+						Quiz is Complete!
+					</h2>
+					<table style="width:50%">
+						<tr>
+							<td>
+					        	<iscorecard></iscorecard>
+					      	</td>
+						</tr>
+					</table>
+					<button ng-click="reload()">Reload</button>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="angular/angular.min.js"></script>
+		<script src="angular/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.min.js"></script>
+
+		<script src="quizapp/quizapp-v0.2.js"></script>
+		<script src="quizapp/ui-bootstrap-tpls-0.9.0.min.js"></script>
+		<script>
+	    	angular.module( "HelloQuiz", ["QuizApp"]);
+	  	</script>
+	</body>
+</html>
